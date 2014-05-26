@@ -12,6 +12,11 @@ var PubSub = (function(){
         },
         sub: function(topic){
             return store[topic];
+        },
+        remove: function(topic){
+            var msg = store[topic];
+            delete store[topic];
+            return msg;
         }
     };
 }());
